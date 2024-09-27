@@ -6,7 +6,7 @@ function App() {
   const [firstNumber, setFirstNumber] = useState(null); 
   const [operation, setOperation] = useState(null);     
   const [result, setResult] = useState(null);  
-  const [storedValue, setStoredValue] = useState(null);  // State to store the result
+  const [storedValue, setStoredValue] = useState(null);  
 
   const numberClick1 = (number) => {
     setFirstNumber((prev) => (prev === null ? number : prev + number));
@@ -49,15 +49,15 @@ function App() {
   };
 
   const storeResult = () => {
-    setStoredValue(result);  // Store the current result
+    setStoredValue(result);  
   };
 
   const recallFirst = () => {
-    setFirstNumber(storedValue);  // Recall stored value to firstNumber
+    setFirstNumber(storedValue);  
   };
 
   const recallSecond = () => {
-    setSecondNumber(storedValue);  // Recall stored value to secondNumber
+    setSecondNumber(storedValue);  
   };
 
   const clear = () => {
@@ -76,7 +76,7 @@ function App() {
             <button key={num} onClick={() => numberClick1(num)}>{num}</button>
           ))}
           <button onClick={clear}>Clear</button>
-          <button onClick={recallFirst}>Recall</button>  {/* Recall button for firstNumber */}
+          <button onClick={recallFirst}>Recall</button>  
         </div>
       </div>
 
@@ -97,7 +97,7 @@ function App() {
             <button key={num} onClick={() => numberClick2(num)}>{num}</button>
           ))}
           <button onClick={clear}>Clear</button>
-          <button onClick={recallSecond}>Recall</button>  {/* Recall button for secondNumber */}
+          <button onClick={recallSecond}>Recall</button>  
         </div>
       </div>
 
@@ -105,7 +105,7 @@ function App() {
         <p>{result !== null ? result : "0"}</p>
         <div>
           <button onClick={sum}>=</button>
-          <button onClick={storeResult}>Store</button>  {/* Store button */}
+          <button onClick={storeResult}>Store</button>  
         </div>
       </div>
     </div>
